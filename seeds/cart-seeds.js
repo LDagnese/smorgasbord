@@ -38,6 +38,6 @@ const cartdata = [
     },
 ];
 
-const seedComments = () => Comment.bulkCreate(commentdata);
+const seedCart = () => Comment.bulkCreate(commentdata);
 
 module.exports = seedComments;
