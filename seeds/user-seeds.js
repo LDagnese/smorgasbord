@@ -2,44 +2,44 @@ const { User } = require("../models");
 
 const userdata = [
   {
-    email: "lilliecat3@gmail.com",
-    name: "lillie",
-    password: "password111",
+    email: "avarley0@google.com.hk",
+    name: "Alric",
+    password: "275YlEhBt",
   },
   {
-    email: "",
-    name: "lizwizz22@gmail.com",
-    password: "password111",
+    email: "cvenediktov1@squarespace.com",
+    name: "Corabelle",
+    password: "F5Z4enEHJccH",
   },
   {
-    email: "angsbran54@gmail.com",
-    name: "angie",
-    password: "password111",
+    email: "eskitteral4@yandex.ru",
+    name: "Edsel",
+    password: "nKoFJcRFCMO",
   },
   {
-    email: "jannann1@gmail.com",
-    name: "jan",
-    password: "password111",
+    email: "lmonelli5@ted.com",
+    name: "Loleta",
+    password: "NUJpsTn",
   },
   {
-    email: "louozzz@gmail.com",
-    name: "louie",
-    password: "password111",
+    email: "kclewett6@oakley.com",
+    name: "Karmen",
+    password: "ZazrdNsBaTj",
   },
   {
-    email: "mattyran@gmail.com",
-    name: "mat",
-    password: "password111",
+    email: "dwehner8@nsw.gov.au",
+    name: "Darla",
+    password: "eVhSGq3X",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "apetria@drupal.org",
+    name: "Ami",
+    password: "5FeTmSWRQ8Lp",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "dmorlb@wikispaces.com",
+    name: "Dore",
+    password: "2zmsFw",
   },
 ];
 
