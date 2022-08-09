@@ -2,44 +2,44 @@ const { User } = require("../models");
 
 const userdata = [
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "avarley0@google.com.hk",
+    name: "Alric",
+    password: "275YlEhBt",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "cvenediktov1@squarespace.com",
+    name: "Corabelle",
+    password: "F5Z4enEHJccH",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "eskitteral4@yandex.ru",
+    name: "Edsel",
+    password: "nKoFJcRFCMO",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "lmonelli5@ted.com",
+    name: "Loleta",
+    password: "NUJpsTn",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "kclewett6@oakley.com",
+    name: "Karmen",
+    password: "ZazrdNsBaTj",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "dwehner8@nsw.gov.au",
+    name: "Darla",
+    password: "eVhSGq3X",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "apetria@drupal.org",
+    name: "Ami",
+    password: "5FeTmSWRQ8Lp",
   },
   {
-    email: "",
-    name: "",
-    password: "",
+    email: "dmorlb@wikispaces.com",
+    name: "Dore",
+    password: "2zmsFw",
   },
 ];
 
