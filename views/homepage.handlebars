@@ -1,1 +1,9 @@
-<div>This is the Smörgåsbord homepage</div>
+
+{{#each restaurants as |restaurant|}}
+    <div>
+        <ul>
+            <li>{{name}}</li>
+            {{!-- <li>{{}}</li> --}}
+        </ul>
+    </div>
+{{/each}}
