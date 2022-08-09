@@ -17,8 +17,8 @@ router.get("/", (req, res) => {
         });
 });
 
-// GET 1 restaurant, display all dishes
-router.get("/restaurant/:id", (req, res) => {
+// GET 1 restaurant, display all dishes - /api/restaurant/:id
+router.get("/:id", (req, res) => {
     Restaurant.findOne({
         where: {
             id: req.params.id,
@@ -37,8 +37,11 @@ router.get("/restaurant/:id", (req, res) => {
             },
         ],
     }).then((dbRestaurantData) => {
-        const restaurant = dbRestaurantData.get({ plain: true });
-        res.render("/", restaurant);
+        const restaurant = dbRestaurantData.get({ plain: true }); //getting
+        res.render("menu", {
+            restaurant,
+        });
+        // res.json(dbRestaurantData);
     });
 });
 
