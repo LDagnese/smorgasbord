@@ -1,38 +1,48 @@
-const { Cart } = require("../models");
+const { Cart } = require('../models');
 
 const cartdata = [
-  {
-    user_id: "",
-    restaurant_id: "",
-    dish_id,
-  },
-  {
-    user_id: "",
-    restaurant_id: "",
-    dish_id,
-  },
-  {
-    user_id: restaurant_id,
-    dish_id,
-  },
-  {
-    user_id: restaurant_id,
-    dish_id,
-  },
-  {
-    user_id: restaurant_id,
-    dish_id,
-  },
-  {
-    user_id: restaurant_id,
-    dish_id,
-  },
-  {
-    user_id: restaurant_id,
-    dish_id,
-  },
+    {
+        user_id: "",
+        restaurant_id: "",
+        dish_id
+    },
+    {
+        user_id: "",
+        restaurant_id: "", 
+        dish_id
+    },
+    {
+        user_id: 
+        restaurant_id,
+        dish_id
+    },
+    {
+        user_id:
+        restaurant_id,
+        dish_id
+    },
+    {
+        user_id:
+        restaurant_id,
+        dish_id
+    },
+    {
+        user_id:
+        restaurant_id,
+        dish_id
+    },
+    {
+        user_id:
+        restaurant_id,
+        dish_id
+    },
+    {
+      user_id:
+      restaurant_id,
+      dish_id,
+    }
 ];
 
-const seedCart = () => Comment.bulkCreate(commentdata);
+const seedCart = () => Cart.bulkCreate(cartdata);
 
-module.exports = seedComments;
+module.exports = seedCart;
