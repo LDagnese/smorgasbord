@@ -18,6 +18,7 @@ Restaurant.init(
             allowNull: false,
         },
         how_expensive: {
+            //maybe make it a number and then convert to number of $ displayed
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
