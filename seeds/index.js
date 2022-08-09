@@ -9,9 +9,6 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log("--------------");
 
-  await seedCart();
-  console.log("--------------");
-
   await seedDish();
   console.log("--------------");
 
