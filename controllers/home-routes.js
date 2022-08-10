@@ -2,14 +2,18 @@ const router = require("express").Router();
 const { Restaurant, User, Dish, Cart } = require("../models");
 
 router.get("/", (req, res) => {
-    Restaurant.findAll().then((dbRestaurantData) => {
-        const restaurants = dbRestaurantData.map((restaurant) =>
-            restaurant.get({ plain: true })
-        );
-        res.render("homepage", {
-            restaurants,
-        });
+  Restaurant.findAll().then((dbRestaurantData) => {
+    const restaurants = dbRestaurantData.map((restaurant) =>
+      restaurant.get({ plain: true })
+    );
+    res.render("homepage", {
+      restaurants,
     });
+  });
+});
+
+router.get("/login", (req, res) => {
+    res.render("login");
 });
 
 module.exports = router;
