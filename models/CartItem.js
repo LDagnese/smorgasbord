@@ -1,11 +1,12 @@
+// only X properties - id, cart_id (references cart), and then quantity? field for comments?
 // import important parts of sequelize library
 const { Model, DataTypes } = require("sequelize");
 // import our database connection from config.js
 const sequelize = require("../config/connection");
 
-class Cart extends Model {}
+class CartItem extends Model {}
 
-Cart.init(
+CartItem.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -13,27 +14,25 @@ Cart.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        user_id: {
+        dish_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: "user",
+                model: "dish",
                 key: "id",
             },
         },
-        restaurant_id: {
+        quantity: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 1,
+        },
+        cart_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: "restaurant",
+                model: "cart",
                 key: "id",
             },
-        },
-        cart_item_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "cartitem",
-                key: "id",
-            },
-        },
+        }, //could potentially add a property for special comments, request, etc. Not MVP, but a thought
     },
     {
         sequelize,
@@ -43,4 +42,4 @@ Cart.init(
     }
 );
 
-module.exports = Cart;
+module.exports = CartItem;
