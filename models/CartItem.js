@@ -7,39 +7,39 @@ const sequelize = require("../config/connection");
 class CartItem extends Model {}
 
 CartItem.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        dish_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "dish",
-                key: "id",
-            },
-        },
-        quantity: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 1,
-        },
-        cart_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "cart",
-                key: "id",
-            },
-        }, //could potentially add a property for special comments, request, etc. Not MVP, but a thought
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: "cart",
-    }
+    dish_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "dish",
+        key: "id",
+      },
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 1,
+    },
+    cart_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "cart",
+        key: "id",
+      },
+    }, //could potentially add a property for special comments, request, etc. Not MVP, but a thought
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "cart",
+  }
 );
 
 module.exports = CartItem;

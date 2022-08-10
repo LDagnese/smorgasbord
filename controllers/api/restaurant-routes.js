@@ -19,30 +19,30 @@ router.get("/", (req, res) => {
 
 // GET 1 restaurant, display all dishes - /api/restaurant/:id
 router.get("/:id", (req, res) => {
-    Restaurant.findOne({
-        where: {
-            id: req.params.id,
-        },
-        include: [
-            {
-                model: Dish,
-                attributes: [
-                    "id",
-                    "price",
-                    "description",
-                    "name",
-                    "vegetarian",
-                    "gluten_free",
-                ],
-            },
+  Restaurant.findOne({
+    where: {
+      id: req.params.id,
+    },
+    include: [
+      {
+        model: Dish,
+        attributes: [
+          "id",
+          "price",
+          "description",
+          "name",
+          "vegetarian",
+          "gluten_free",
         ],
-    }).then((dbRestaurantData) => {
-        const restaurant = dbRestaurantData.get({ plain: true }); //getting
-        res.render("menu", {
-            restaurant,
-        });
-        // res.json(dbRestaurantData);
+      },
+    ],
+  }).then((dbRestaurantData) => {
+    const restaurant = dbRestaurantData.get({ plain: true }); //getting
+    res.render("menu", {
+      restaurant,
     });
+    // res.json(dbRestaurantData);
+  });
 });
 
 module.exports = router;
