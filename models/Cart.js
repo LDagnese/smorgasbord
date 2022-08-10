@@ -6,41 +6,41 @@ const sequelize = require("../config/connection");
 class Cart extends Model {}
 
 Cart.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "user",
-                key: "id",
-            },
-        },
-        restaurant_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "restaurant",
-                key: "id",
-            },
-        },
-        cart_item_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "cartitem",
-                key: "id",
-            },
-        },
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: "cart",
-    }
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    },
+    restaurant_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "restaurant",
+        key: "id",
+      },
+    },
+    cart_item_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "cartitem",
+        key: "id",
+      },
+    },
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "cart",
+  }
 );
 
 module.exports = Cart;
