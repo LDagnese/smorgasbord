@@ -3,18 +3,18 @@ const { Restaurant, Dish } = require("../../models");
 
 // GET all restaurants, /api/restaurant
 router.get("/", (req, res) => {
-  Restaurant.findAll()
-    .then((dbRestaurantData) => {
-      // const restaurants = dbRestaurantData.map((restaurant) =>
-      //     restaurant.get({ plain: true })
-      // );
-      res.json(dbRestaurantData);
-      // res.render("/", restaurants);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+    Restaurant.findAll()
+        .then((dbRestaurantData) => {
+            // const restaurants = dbRestaurantData.map((restaurant) =>
+            //     restaurant.get({ plain: true })
+            // );
+            res.json(dbRestaurantData);
+            // res.render("/", restaurants);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 // GET 1 restaurant, display all dishes - /api/restaurant/:id
