@@ -7,6 +7,7 @@ router.post("/", (req, res) => {
     // expects {username:'Lernantino',email:'lernantino@gmail.com',password:'password2234'}
     User.create({
         // pass in key/value pairs where keys are what's defined in User model, and values are what we get from req.body
+        name:req.body.name,
         email: req.body.email,
         password: req.body.password,
     })
