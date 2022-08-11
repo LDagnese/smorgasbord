@@ -27,13 +27,6 @@ Cart.init(
         key: "id",
       },
     },
-    cart_item_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "cartitem",
-        key: "id",
-      },
-    },
   },
   {
     sequelize,
