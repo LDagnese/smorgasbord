@@ -2,11 +2,20 @@
   box-sizing: border-box;
 }
 
+/* Color scheme from wireframe */
+/* Example: background-color: var(--background-color); */
+:root {
+  --primary-color: #2B2D42;
+  --secondary-color: #D90429;
+  --tertiary-color: #8D99AE;
+  --background-color: #EDF2F4;
+}
+
 body,
 html {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Tahoma, sans-serif;
   color: #333;
 }
