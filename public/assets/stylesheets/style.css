@@ -1,18 +1,16 @@
-/* 
-*{
-  box-sizing: border-box;
-}
-h1 {
-  color:white;
-} */
+.container{
 
-/* Color scheme from wireframe */
-/* Example: background-color: var(--background-color); */
-:root {
-  --primary-color: #2B2D42;
-  --secondary-color: #D90429;
-  --tertiary-color: #8D99AE;
-  --background-color: #EDF2F4;
+  width:100%;
+  padding-right: auto;
+  padding-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.header {
+  padding:10px 16px;
+  background: #011936;
+  color: black;
 }
 
 * {
@@ -27,10 +25,10 @@ html {
   font-family: Tahoma, sans-serif;
   color: #333;
 }
-
-/* 
-.text-decoration-none {
-  text-decoration: none;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .d-block {
   display: block !important;
@@ -38,9 +36,9 @@ html {
 .dropdown-toggle {
   white-space: nowrap;
 }
+
 a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
-} */
-
+} 
