@@ -10,26 +10,10 @@ router.get("/", (req, res) => {
       restaurants,
     });
   });
-<<<<<<< Updated upstream
 });
 
 router.get("/login", (req, res) => {
-    res.render("login");
-});
-
-router.get("/signup", (req, res) => {
-  if (req.session.loggedIn) {
-    req.redirect("/");
-    return;
-  }
-
-  res.render("signup");
-=======
->>>>>>> Stashed changes
-});
-
-router.get("/login", (req, res) => {
-    res.render("login");
+  res.render("login");
 });
 
 router.get("/signup", (req, res) => {
