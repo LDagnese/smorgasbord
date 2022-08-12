@@ -1,8 +1,9 @@
 const path = require("path");
 const express = require("express");
 const exphbs = require("express-handlebars");
-const hbs = exphbs.create({});
 const session = require("express-session");
+const helpers = require("./utils/helpers");
+const hbs = exphbs.create({ helpers });
 
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -15,8 +16,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 // Sets up the Express App

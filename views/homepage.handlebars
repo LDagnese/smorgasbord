@@ -1,10 +1,9 @@
-
-{{#each restaurants as |restaurant|}}
-    <div>
-        <ul>
-            <li>{{name}}</li>
-            <li>{{how_expensive}}</li>
-            <li>{{type_of_food}}</li>
-        </ul>
+<div class="m-5 p-5 row justify-content-around">
+  {{#each restaurants as |restaurant|}}
+    <div class="restaurant-card col-4">
+      <h2>{{name}}</h2>
+      <p>Price per Plate: {{format_expensive how_expensive}}</p>
+      <p>Type of Food: {{type_of_food}}</p>
     </div>
-{{/each}}
+  {{/each}}
+</div>

@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
     );
     res.render("homepage", {
       restaurants,
+      //   needs to pass cartId in so we can access it on the page
     });
   });
 });
