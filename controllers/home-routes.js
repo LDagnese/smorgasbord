@@ -12,7 +12,13 @@ router.get("/", (req, res) => {
   });
 });
 
+// LOG in route for the homepage
 router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
   res.render("login");
 });
 
