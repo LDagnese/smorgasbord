@@ -1,4 +1,3 @@
-const sequelize = require("../config/connection");
 const { Dish } = require("../models");
 
 const dishdata = [
