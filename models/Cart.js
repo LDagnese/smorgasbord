@@ -20,20 +20,13 @@ Cart.init(
         key: "id",
       },
     },
-    restaurant_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "restaurant",
-        key: "id",
-      },
-    },
-    cart_item_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "cartitem",
-        key: "id",
-      },
-    },
+    // restaurant_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "restaurant",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     sequelize,
