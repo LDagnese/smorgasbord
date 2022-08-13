@@ -32,8 +32,11 @@
         </ul>
       </header>
       <nav>
+        {{#if loggedIn}}
         <button id="logout" class="">logout</button>
+        {{else}}
         <a href="/login">login</a>
+        {{/if}}
       </nav>
     </div>
       <main>
