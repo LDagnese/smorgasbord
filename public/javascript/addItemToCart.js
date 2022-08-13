@@ -9,7 +9,4 @@ async function addToCartFormHandler(event){
 
 }
 
-
-
-
 document.querySelector(".add-to-cart").addEventListener("submit",addToCartFormHandler);

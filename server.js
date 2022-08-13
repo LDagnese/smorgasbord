@@ -22,6 +22,7 @@ const sess = {
 
 // Sets up the Express App
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 3001;
 
 app.use(session(sess));
@@ -33,6 +34,7 @@ app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
+
 
 // Start the server to begin listening
 
