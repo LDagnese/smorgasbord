@@ -41,8 +41,8 @@ router.get("/:id", (req, res) => {
     const restaurant = dbRestaurantData.get({ plain: true }); //getting
     res.render("menu", {
       restaurant,
+      loggedIn: req.session.loggedIn,
     });
-    // res.json(dbRestaurantData);
   });
 });
 

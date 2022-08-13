@@ -3,32 +3,32 @@ const { User } = require("../models");
 const userdata = [
   {
     email: "lilliecat3@gmail.com",
-    name: "lillie",
+    username: "lillie",
     password: "password111",
   },
   {
     email: "lizwizz22@gmail.com",
-    name: "golly",
+    username: "golly",
     password: "password111",
   },
   {
     email: "angsbran54@gmail.com",
-    name: "angie",
+    username: "angie",
     password: "password111",
   },
   {
     email: "jannann1@gmail.com",
-    name: "jan",
+    username: "jan",
     password: "password111",
   },
   {
     email: "louozzz@gmail.com",
-    name: "louie",
+    username: "louie",
     password: "password111",
   },
   {
     email: "mattyran@gmail.com",
-    name: "mat",
+    username: "mat",
     password: "password111",
   },
 ];

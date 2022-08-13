@@ -31,6 +31,13 @@
           </li>
         </ul>
       </header>
+      <nav>
+        {{#if loggedIn}}
+        <button id="logout" class="">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
     </div>
       <main>
         {{{body}}}
@@ -39,6 +46,7 @@
         Copyright 2022
       </footer>
     </div>
+    <script src="/javascript/logout.js"></script>
   </body>
 
 </html>
