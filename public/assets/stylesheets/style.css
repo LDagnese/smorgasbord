@@ -1,105 +1,47 @@
-
-.header {
-  padding:10px 16px;
-  background: #011936;
-  color: black;
-}
-.content {
-  padding:16px;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.sticky + .content {
-  padding-top: 102px;
-} */
-header {
-  padding: 20 px 35 px;
-  background-color: var(--tertiary-color);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: -webkit-sticky;
-  position: sticky;
-  top:0;
-  background-image: url("../images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-position: 80%;
-  z-index: 9999;
-  }
-header h1{
-  font-weight: bold;
-  font-size: 36px;
-  color:var(--primary-color);
+*{
+  padding: 0;
   margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-header a{
-  color: var(--primary-color);
-  text-decoration: none;
-}   
-header nav {
-  margin: 7px 0;
 }
 
-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+body{
+  position:relative;
+}
+
+header{
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: aqua;
+  z-index:1000;
+}
+li{
   list-style: none;
 }
-header nav ul li a {
-  padding: 10px 15px;
-  font-weight: lighter;
-  font-size: 1.55vw;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+a{
+  text-decoration: none;
+  color: white;
 }
-
-footer {
-  background: var(--primary-color);
-  width: 100%;
-  padding: 40px 35px;
+.container{
+  width: 1280px;
+  margin: auto;
+}
+#navbar{
+  width: 95%;
+  margin: auto;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-menu{
   display:flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
 }
-footer h2 {
-  color: var(--secondary-color);
-  font-size: 30px;
-  margin: 0;
+#nav-branding{
+  font-size: 2rem;
 }
-footer div {
-  line-height: 1.5;
-  text-align: right;
-}
-footer a{
-  color: var(--secondary-color)
-}
-.topnav-right{
-  float:right;
-  top: 50px;
-  right: 0px;
-}
-.topnav{
-  background-color: #011936;
-  overflow: hidden;
-}
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-.contact {
-  background: black;
-}
-.contact h2{
-  color: red;
+.restaurant-card{
+color: blueviolet;
 }
