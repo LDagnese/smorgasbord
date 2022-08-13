@@ -33,6 +33,7 @@ router.get("/:id", (req, res) => {
           "name",
           "vegetarian",
           "gluten_free",
+          "picture_url",
         ],
       },
     ],
