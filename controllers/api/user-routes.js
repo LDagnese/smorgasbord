@@ -56,6 +56,7 @@ router.post("/", (req, res) => {
             res.status(500).json(err);
         });
 
+    // can I nest this inside of user create? to prevent
     Cart.create({
         user_id: req.session.user_id,
     }).then((dbCartData) => {
