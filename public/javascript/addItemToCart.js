@@ -6,6 +6,7 @@ async function addToCartFormHandler(event){
 
 
     // perform fetch request that posts information and creates a new CartItem
+    
 
 }
 
