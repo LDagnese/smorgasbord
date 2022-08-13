@@ -38,6 +38,13 @@ Restaurant.init(
         //     type: DataTypes.BOOLEAN,
         //     allowNull: false,
         // },
+        picture_url: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isUrl: true,
+            },
+        },
     },
     {
         sequelize,
