@@ -1,0 +1,33 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary-color: #2b2d42;
+  --secondary-color: #d90429;
+  --tertiary-color: #8d99ae;
+  --background-color: #edf2f4;
+}
+
+h2 {
+    margin: auto;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    width: 90%;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.cart-list {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.btn {
+    margin-top: 25px;
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    width: 45%;
+}
