@@ -2,16 +2,24 @@
   padding: 0;
   margin: 0;
 }
-
 body{
   position:relative;
 }
-
+h2{
+  color:white;
+}
 header{
   position: fixed;
   top:0;
   width: 100%;
-  background-color: aqua;
+  background-color: 416788;
+  z-index:1000;
+}
+footer{
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  background-color: 416788;
   z-index:1000;
 }
 li{
@@ -20,28 +28,45 @@ li{
 a{
   text-decoration: none;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  
 }
+
 .container{
   width: 1280px;
   margin: auto;
 }
-#navbar{
-  width: 95%;
+.navbar{
+  width: 85%;
   margin: auto;
-  min-height: 70px;
+  min-height: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: left;
+  align-items:flex-start;
+  float: left;
 }
-#nav-menu{
+.nav-menu{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 70px;
+  float: right;
 }
-#nav-branding{
+.nav-branding{
   font-size: 2rem;
+}
+.nav-link{
+  font-size: larger;
 }
 .restaurant-card{
 color: blueviolet;
+}
+.center-container{
+  text-align: center;
+}
+@media(max-width:1280px) {
+  .container{
+    width: 100%;
+  }
 }
