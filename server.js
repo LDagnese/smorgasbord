@@ -35,7 +35,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-
 // Start the server to begin listening
 
 sequelize.sync({ force: false }).then(() => {

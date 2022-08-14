@@ -43,12 +43,10 @@ Dish.init(
         key: "id",
       },
     },
-    picture_url: {
+    picture_id: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isUrl: true,
-      },
+      defaultValue: "id",
     },
   },
   {
