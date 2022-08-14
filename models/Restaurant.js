@@ -38,12 +38,10 @@ Restaurant.init(
     //     type: DataTypes.BOOLEAN,
     //     allowNull: false,
     // },
-    picture_url: {
+    picture_id: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        isUrl: true,
-      },
+      defaultValue: "id",
     },
   },
   {
