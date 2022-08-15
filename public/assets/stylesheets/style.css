@@ -5,6 +5,7 @@
   padding-left: auto;
   margin-right: auto;
   margin-left: auto;
+}
 
 *{
   padding: 0;
@@ -29,7 +30,7 @@ html {
   font-family: Tahoma, sans-serif;
   color: #333;
 }
-.sticky {
+.sticky 
 header{
   position: fixed;
   top:0;
