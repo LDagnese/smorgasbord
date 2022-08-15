@@ -1,41 +1,30 @@
 <h2>Order Cart</h2>
-<div>
-  <table class="cart-list table table-striped">
+<div class="left-container">
+  <table class="cart-list table table-hover table-borderless">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col"></th>
         <th scope="col">Item</th>
         <th scope="col">Quantity</th>
         <th scope="col">Price</th>
-        <th scope="col">Delete</th>
+        <th scope="col"></th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">{{id}}</th>
-      </tr>
-      <tr>
-        <th scope="row">{{dish_id}}</th>
-      </tr>
-      <tr>
-        <!-- TODO: when clicked, can change quantity of item -->
-        <th scope="row">{{quantity}}</th>
-      </tr>
-      <tr>
-        <th scope="row">${{price}}</th>
-      </tr>
-      <tr>
-        <th scope="row"><button class="delete">X</button></th>
-      </tr>
-    </tbody>
+  <tbody>
+   {{#each cart.cart-item as |cart-item|}}
+    {{> cart-item}}
+  {{/each}}
+  </tbody>
   </table>
   <!-- add total price? -->
+  <div class="col-6 mx-auto text-center">
   <button type="button" class="btn btn-danger">Add More Items</button>
+  </div>
   <!-- add functionality if time allows
 <button type="button" class="btn btn-danger">Drop Here to Remove Item</button> 
 -->
 </div>
 
 <!-- add details regarding pickup/delivery, discounts, tip, etc. -->
-<div>
+<div class="right-container">
 </div>

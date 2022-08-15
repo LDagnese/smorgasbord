@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Restaurant, User, Dish, Cart } = require("../models");
+const { Restaurant, Cart } = require("../models");
 
 router.get("/", (req, res) => {
   Restaurant.findAll().then((dbRestaurantData) => {
@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
     );
     res.render("homepage", {
       restaurants,
+      loggedIn: req.session.loggedIn,
       //   needs to pass cartId in so we can access it on the page
     });
   });
@@ -30,6 +31,15 @@ router.get("/signup", (req, res) => {
   }
 
   res.render("signup");
+});
+
+router.get("/cart", (req, res) => {
+  if (req.session.loggedIn) {
+    req.redirect("/");
+    return;
+  }
+
+  res.render("cart");
 });
 
 module.exports = router;
