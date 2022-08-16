@@ -34,7 +34,8 @@
       </header>
       <nav>
         {{#if loggedIn}}
-        <button id="logout" class="">logout</button>
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="log-out-btn">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
@@ -50,4 +51,8 @@
             </div>
       </footer> 
   </body>
+
+  {{#if loggedIn}}
+  <script src="/public/javascript/logout.js"></script>
+  {{/if}}
 </html>

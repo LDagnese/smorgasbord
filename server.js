@@ -27,6 +27,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(session(sess));
 
+// app.use(express.cookieSession())
 // Set Handlebars as the default template engine.
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
@@ -37,7 +38,7 @@ app.use(routes);
 
 // Start the server to begin listening
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => {
     console.log(`Server listening on: http://localhost:${PORT}`);
   });
