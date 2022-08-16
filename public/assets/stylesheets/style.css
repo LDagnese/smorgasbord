@@ -12,14 +12,14 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: 416788;
+  background-color: #416788;
   z-index: 1000;
 }
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: 416788;
+  background-color: #416788;
   z-index: 1000;
 }
 li {

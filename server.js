@@ -11,13 +11,13 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 
 const sess = {
-    secret: process.env.SESS_SECRET,
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-        db: sequelize,
-    }),
+  secret: process.env.SESS_SECRET,
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
 };
 
 // Sets up the Express App
@@ -38,7 +38,7 @@ app.use(routes);
 // Start the server to begin listening
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => {
-        console.log(`Server listening on: http://localhost:${PORT}`);
-    });
+  app.listen(PORT, () => {
+    console.log(`Server listening on: http://localhost:${PORT}`);
+  });
 });
