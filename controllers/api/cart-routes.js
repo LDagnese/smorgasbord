@@ -25,7 +25,7 @@ router.delete("empty/:id", (req, res) => {
             cart_id: req.params.id,
         },
     }).
-        .then((dbCartData) => {
+        then((dbCartData) => {
             if (!dbCartData) {
                 res.status(404).json({
                     message: "No cart found with this id",
