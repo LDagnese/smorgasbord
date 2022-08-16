@@ -1,7 +1,7 @@
 async function restaurantSelectHandler(event) {
     event.preventDefault();
 
-    // take the id of the restaurant from the id of the restaurant-card we clicked on.
+    // get the restaurant id from the id of the restaurant-card HTML element we clicked on.
     const id = event.target.id;
 
     const response = await fetch(`/api/restaurant/${id}`, {
