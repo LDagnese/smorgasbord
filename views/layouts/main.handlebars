@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -5,49 +6,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smorgasbord</title>
-     
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-   <link rel="stylesheet" href="/assets/stylesheets/style.css" type="text/css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/stylesheets/style.css"
+      type="text/css"
+    />
   </head>
-      <header>
-        <div class="container">
-          {{!-- <img src="/public/assets/images/Smorgasbord.png" alt="smorgasbord cat"> --}}
-            <nav class="navbar">
-              {{!-- need to change color and addcat png --}}
-              <h1>
-               <a href="/" class="nav-branding"> Smorgasbord </a>
-             </h1>
-             </nav>
-              <nav class="navbar">
-             <h2>Your Favorite Restaurants, Right Meow</h2>
-             </nav>
-                <ul class="nav-menu">
-                  <li class="nav-link"><a href="/">Home</a></li>
-                  <li class="nav-link"><a href="/">About</a></li>
-                  <li class="nav-link"><a href="/">Login</a></li>
-                </ul>
-                
-                {{!-- need links to actually go to homepage, about, and login page --}}
-        </div>
-      </header>
-      <nav>
-        {{#if loggedIn}}
-        <button id="logout" class="">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+  
+  <body>
+  <header>
+    <div class="d-flex align-items-center pt-2 pb-2">
+      <div class="col-12 col-md-2">
+        <img
+          src="https://res.cloudinary.com/du44htqe7/image/upload/v1660445075/smorgasbord/Smorgasbord_z5pwyq.png"
+          alt="smorgasbord cat"
+        />
+      </div>
+      <div class="col-md-4 col-12 d-flex flex-column align-items-center">
+        <h1>
+          <a href="/" class="nav-branding"> Smorgasbord </a>
+        </h1>
+        <h2>Your Favorite Restaurants, Right Meow</h2>
+      </div>
+      <div class="col-12 col-md-6">
+        {{!-- <nav class="navbar">
+          {{! need to change color and addcat png }}
+
+        </nav> --}}
+        <ul class="nav-menu">
+          <li class="nav-link"><a href="/">Home</a></li>
+          <li class="nav-link"><a href="/">About</a></li>
+          {{#if loggedIn}}
+            <button id="logout" class="">logout</button>
+            <button id="{{id}}" class="cart">cart</button>
+          {{else}}
+            <a href="/login">login</a>
+          {{/if}}
+        </ul>
+      </div>
+      {{! need links to actually go to homepage, about, and login page }}
     </div>
-      <main>
-        {{{body}}}
-      </main>
-       <footer>
-      <div class="center-container">
-            <h2>❤️ Made with love by Smorgasbord.</h2>
-             <div class="center-container">&copy; 2022 Smorgasbord, Inc.</div>
-            </div>
-      </footer> 
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+  <footer>
+    <div class="center-container">
+      <h2>❤️ Made with love by Smorgasbord.</h2>
+      <div class="center-container">&copy; 2022 Smorgasbord, Inc.</div>
+    </div>
+
+  </footer>
   </body>
 </html>
