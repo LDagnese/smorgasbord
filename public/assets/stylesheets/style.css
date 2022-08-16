@@ -1,72 +1,72 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
-body{
-  position:relative;
+body {
+  position: relative;
 }
-h2{
-  color:white;
+h2 {
+  color: white;
 }
-header{
-  position: fixed;
-  top:0;
+header {
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: 416788;
-  z-index:1000;
+  z-index: 1000;
 }
-footer{
+footer {
   position: fixed;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   background-color: 416788;
-  z-index:1000;
+  z-index: 1000;
 }
-li{
+li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: white;
   display: flex;
   justify-content: space-between;
-  
 }
 
-.container{
+.container {
   width: 1280px;
   margin: auto;
 }
-.navbar{
+.navbar {
   width: 85%;
   margin: auto;
   min-height: 50px;
   display: flex;
   justify-content: left;
-  align-items:flex-start;
+  align-items: flex-start;
   float: left;
 }
-.nav-menu{
-  display:flex;
+.nav-menu {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 70px;
   float: right;
 }
-.nav-branding{
+.nav-branding {
   font-size: 2rem;
 }
-.nav-link{
+.nav-link {
   font-size: larger;
 }
-.restaurant-card{
-color: blueviolet;
+.restaurant-card {
+  color: blueviolet;
 }
-.center-container{
+.center-container {
   text-align: center;
 }
-@media(max-width:1280px) {
-  .container{
+
+@media (max-width: 1280px) {
+  .container {
     width: 100%;
   }
 }
