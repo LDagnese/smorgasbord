@@ -43,6 +43,11 @@ Dish.init(
         key: "id",
       },
     },
+    picture_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "id",
+    },
   },
   {
     sequelize,

@@ -33,16 +33,33 @@ router.get("/:id", (req, res) => {
           "name",
           "vegetarian",
           "gluten_free",
+          "picture_id",
         ],
       },
     ],
   }).then((dbRestaurantData) => {
-    const restaurant = dbRestaurantData.get({ plain: true }); //getting
+    console.log(dbRestaurantData.get({plain: true}));
+    const restaurant = dbRestaurantData.get({ plain: true });
     res.render("menu", {
       restaurant,
+      loggedIn: req.session.loggedIn,
     });
-    // res.json(dbRestaurantData);
   });
+});
+
+// CREATE a new restaurant
+router.post("/", (req, res) => {
+  Restaurant.create({
+    name: req.body.name,
+    how_expensive: req.body.how_expensive,
+    type_of_food: req.body.type_of_food,
+    picture_id: req.body.picture_id,
+  })
+    .then((dbRestaurantData) => res.json(dbRestaurantData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;

@@ -34,11 +34,10 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// create a user, /api/user
+// CREATE a new user
 router.post("/", (req, res) => {
-  // expects {username:'Lernantino',email:'lernantino@gmail.com',password:'password2234'}
   User.create({
-    // pass in key/value pairs where keys are what's defined in User model, and values are what we get from req.body
+    username: req.body.username,
     email: req.body.email,
     password: req.body.password,
   })
@@ -55,6 +54,16 @@ router.post("/", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+
+  // can I nest this inside of user create? to prevent
+/*   Cart.create({
+    user_id: req.session.user_id,
+  }).then((dbCartData) => {
+    res.render("main", {
+      user_id, //need to be able to pass cart id value into the main.handlebars to use later
+      loggedIn: true,
+    });
+  }); */
 });
 
 // user login, /api/user/login
@@ -65,7 +74,9 @@ router.post("/login", (req, res) => {
     },
   }).then((dbUserData) => {
     if (!dbUserData) {
-      res.status(400).json({ message: "No user with that email address!" });
+      res.status(400).json({
+        message: "No user with that email address!",
+      });
       return;
     }
 

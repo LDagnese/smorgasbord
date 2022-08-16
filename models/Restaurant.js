@@ -19,10 +19,11 @@ Restaurant.init(
     },
     how_expensive: {
       //maybe make it a number and then convert to number of $ displayed
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        contains: "$",
+        min: 1,
+        max: 4,
       },
     },
     type_of_food: {
@@ -37,6 +38,11 @@ Restaurant.init(
     //     type: DataTypes.BOOLEAN,
     //     allowNull: false,
     // },
+    picture_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: "id",
+    },
   },
   {
     sequelize,
