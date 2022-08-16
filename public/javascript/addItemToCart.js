@@ -9,8 +9,8 @@ async function addToCartFormHandler(event) {
     // take name, price - get cart_id from the class=cart, and take the cart_id from there
     const name = document.querySelector(".name").innerText;
     const price = document.querySelector(".price").innerText;
-    const cart_id = document.querySelector(".class").id; //should get the cart_id
-    console.log(dish_id, name, price, cart_id);
+    // const cart_id = document.querySelector(".class").id; //should get the cart_id
+    console.log(dish_id, name, price);
 
     const response = await fetch("/api/cart", {
         method: "post",
@@ -18,7 +18,6 @@ async function addToCartFormHandler(event) {
             dish_id,
             name,
             price,
-            cart_id,
         }),
         headers: { "Content-Type": "application/json" },
     });

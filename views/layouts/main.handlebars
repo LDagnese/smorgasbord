@@ -44,7 +44,10 @@
           <li class="nav-link"><a href="/">About</a></li>
           {{#if loggedIn}}
             <button id="logout" class="">logout</button>
-            <button id="{{id}}" class="cart">cart</button>
+            <button class="cart" href="/cart">cart</button> 
+            <a href="/cart">cart2</a>
+            {{!-- href="/cart" --}}
+            {{!-- id="{{id}}" --}}
           {{else}}
             <a href="/login">login</a>
           {{/if}}
@@ -63,5 +66,9 @@
     </div>
 
   </footer>
+ {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  <script src="/javascript/goToCart.js"></script>
+  {{/if}}
   </body>
 </html>
