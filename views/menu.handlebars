@@ -10,28 +10,29 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h4 class="restaurant-title">{{restaurant.name}}</h4>
+          <h4 class="restaurant-title tex-center">{{restaurant.name}}</h4>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="card-deck">
+<div class="center card-deck">
   <div class="m-5 p-5 row">
     {{#each restaurant.dishes as |dish|}}
-      <div class="dish-card col-12 col-lg-4">
+      <div class="col-12 col-lg-4">
         <img
-          class="rounded mb-1"
+          class="card-img-top rounded mt-4 mx-auto d-block"
           src={{cloudinary_url 200 200 picture_id}}
           alt="Card image cap"
         />
-        <h2>{{name}}</h2>
-        <p>${{price}}.00</p>
-        <p>{{description}}</p>
-        <div>
-          <button type="submit" id={{id}} class="add-to-cart rounded mb-5">Add
-            to Cart</button>
+        <div class="dish-card card-body border">
+          <h2 class="name">{{name}}</h2>
+          <p class="price">${{price}}.00</p>
+          <p>{{description}}</p>
+          <div>
+            <button type="submit" id={{id}} class="add-to-cart">Add to Cart</button>
+          </div>
         </div>
       </div>
     {{/each}}

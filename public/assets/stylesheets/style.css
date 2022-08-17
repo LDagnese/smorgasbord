@@ -64,7 +64,13 @@ a {
 .center-container {
   text-align: center;
 }
-
+.restaurant-dish {
+  background-color: #edf2f4;
+}
+.restaurant-title {
+  font-size: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 @media (max-width: 1280px) {
   .container {
     width: 100%;
