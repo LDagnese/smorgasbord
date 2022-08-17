@@ -1,10 +1,15 @@
 <div class="m-5 p-5 row justify-content-around">
   {{#each restaurants as |restaurant|}}
-      <div class="restaurant-card col-12 col-lg-4">
-        <a href="/api/restaurant/{{id}}"><img src={{cloudinary_url 200 200 picture_id}}>
-        <h2>{{name}}</h2></a>
-        <p>Price per Plate: {{format_expensive how_expensive}}</p>
-        <p>Type of Food: {{type_of_food}}</p>
-      </div>
+    <div
+      class="restaurant-card col-12 col-lg-4 d-flex flex-column align-items-center"
+    >
+      <a href="/api/restaurant/{{id}}"><img
+          src={{cloudinary_url 200 200 picture_id}}
+        />
+      </a>
+      <h2>{{name}}</h2>
+      <p>Price per Plate: {{format_expensive how_expensive}}</p>
+      <p>Type of Food: {{type_of_food}}</p>
+    </div>
   {{/each}}
 </div>
