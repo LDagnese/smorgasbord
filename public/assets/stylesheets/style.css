@@ -71,6 +71,17 @@ a {
   font-size: 50px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.name {
+  color: black;
+}
+.card-img-top {
+  background-color: #edf2f4;
+}
+.dish-card {
+  height: 17rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #edf2f4;
+}
 @media (max-width: 1280px) {
   .container {
     width: 100%;
