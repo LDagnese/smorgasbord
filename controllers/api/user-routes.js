@@ -49,33 +49,11 @@ router.post("/", (req, res) => {
 
                 res.json(dbUserData);
             });
-
-            // Cart.create({
-            //     user_id: req.session.user_id,
-            // }).catch((err) => {
-            //     console.log(err);
-            //     res.status(500).json(err);
-            // });
         })
         .catch((err) => {
             console.log(err);
             res.status(500).json(err);
         });
-
-    // can I nest this inside of user create? to prevent creating a Cart if there's a user error...
-
-    // then((dbCartData) => {
-    //     // res.render("main", {
-    //     //     id, //need to be able to pass cart id value into the main.handlebars to use later
-    //     //     loggedIn: true,
-    //     // });
-    //     // res.json(dbCartData);
-    //     console.log(success);
-    // })
-    // .catch((err) => {
-    //     console.log(err);
-    //     res.status(500).json(err);
-    // });
 });
 
 // user login, /api/user/login

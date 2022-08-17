@@ -32,7 +32,7 @@
         <h1>
           <a href="/" class="nav-branding"> Smorgasbord </a>
         </h1>
-        <h2>Your Favorite Restaurants, Right Meow</h2>
+        <h2 class="tagline">Your Favorite Restaurants, Right Meow</h2>
       </div>
       <div class="col-12 col-md-6">
         {{!-- <nav class="navbar">
@@ -41,7 +41,7 @@
         </nav> --}}
         <ul class="nav-menu">
           <li class="nav-link"><a href="/">Home</a></li>
-          <li class="nav-link"><a href="/">About</a></li>
+          {{!-- <li class="nav-link"><a href="/">About</a></li> --}}
           {{#if loggedIn}}
             <button id="logout" class="">logout</button>
             <button class="cart" href="/api/cart">cart</button> 
@@ -64,7 +64,6 @@
       <h2>❤️ Made with love by Smorgasbord.</h2>
       <div class="center-container">&copy; 2022 Smorgasbord, Inc.</div>
     </div>
-
   </footer>
  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>

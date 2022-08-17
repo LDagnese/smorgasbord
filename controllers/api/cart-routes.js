@@ -31,14 +31,10 @@ router.post("/", (req, res) => {
         name: req.body.name,
         price: req.body.price,
         cart_id: req.session.user_id,
-    })
-        .then((dbCartItemData) => {
-            res.json(dbCartItemData);
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(400).json(err);
-        });
+    }).catch((err) => {
+        console.log(err);
+        res.status(400).json(err);
+    });
 });
 
 // deletes all cart items with a certain cart id
@@ -84,6 +80,7 @@ router.delete("delete/:id", (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
+    return;
 });
 
 router.post("create/", (req, res) => {
