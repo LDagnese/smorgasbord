@@ -7,47 +7,47 @@ const sequelize = require("../config/connection");
 class CartItem extends Model {}
 
 CartItem.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        dish_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "dish",
+                key: "id",
+            },
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        price: {
+            type: DataTypes.DECIMAL,
+            allowNull: false,
+        },
+        quantity: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 1,
+        },
+        cart_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "cart",
+                key: "id",
+            },
+        }, //could potentially add a property for special comments, request, etc. Not MVP, but a thought
     },
-    dish_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "dish",
-        key: "id",
-      },
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    price: {
-      type: DataTypes.DECIMAL,
-      allowNull: false,
-    },
-    quantity: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 1,
-    },
-    cart_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "cart",
-        key: "id",
-      },
-    }, //could potentially add a property for special comments, request, etc. Not MVP, but a thought
-  },
-  {
-    sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "cart",
-  }
+    {
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "cartitem",
+    }
 );
 
 module.exports = CartItem;

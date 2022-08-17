@@ -8,6 +8,7 @@ async function goToCartHandler(event) {
     });
     if (response.ok) {
         console.log("success");
+        document.location.replace("/api/cart");
     } else {
         alert(response.statusText);
     }
