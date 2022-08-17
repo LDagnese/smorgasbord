@@ -66,6 +66,8 @@ a {
 }
 .restaurant-dish {
   background-color: #edf2f4;
+  max-width: 700px;
+  margin-bottom: 0;
 }
 .restaurant-title {
   font-size: 50px;
