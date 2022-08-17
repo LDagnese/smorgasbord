@@ -11,8 +11,10 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
+
             <h4 class="restaurant-title">{{restaurant.name}}</h4>
           {{!-- <h4 class="restaurant-title tex-center">{{restaurant.name}}</h4> angelica change --}}
+
         </div>
       </div>
     </div>
@@ -21,6 +23,10 @@
 
 {{!-- <div class="center card-deck">
   <div class="row mt-2 mr-5 ml-5 p-4">
+
+<div class="center">
+  <div class="mr-5 ml-5 p-5 row">
+
     {{#each restaurant.dishes as |dish|}}
       <div class="col-12 col-lg-4">
         <img
@@ -29,12 +35,13 @@
           alt="Card image cap"
         />
         <div class="dish-card card-body border">
-          <h2 class="name">{{name}}</h2>
-          <p class="price">${{price}}.00</p>
+          <h2 class="name" id="name-{{id}}">{{name}}</h2>
+          <p class="price {{price}}" id="price-{{id}}">${{price}}.00</p>
           <p>{{description}}</p>
           <div>
             <button type="submit" id={{id}} class="add-to-cart">Add to Cart</button>
           </div>
+
         </div> --}}
 
 <div class="card-deck">
@@ -47,10 +54,12 @@
       <p>{{description}}</p>
       <div>
         <button type="submit" id={{id}} class="add-to-cart rounded mb-5">Add to Cart</button>
+
+        </div>
+
       </div>
     {{/each}}
   </div>
-</div>
 </div>
 
 <script src="/javascript/addItemToCart.js"></script>
