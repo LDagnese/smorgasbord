@@ -5,7 +5,7 @@
 body {
   position: relative;
 }
-h2 {
+h2.tagline {
   color: white;
 }
 header {
@@ -59,12 +59,19 @@ a {
   font-size: larger;
 }
 .restaurant-card {
-  color: blueviolet;
+  color: black;
+  border: solid;
+  border-color: red;
+  border-width: 15px;
+  padding: 15px;
+  margin: 15px;
 }
 .center-container {
   text-align: center;
 }
-
+.restaurant-card h2{
+  color:black;
+}
 @media (max-width: 1280px) {
   .container {
     width: 100%;
