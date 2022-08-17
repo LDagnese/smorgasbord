@@ -39,7 +39,9 @@ router.get("/cart", (req, res) => {
         return;
     }
 
-    res.render("cart");
+    res.render("cart", {
+        loggedIn: req.session.loggedIn,
+    });
 });
 
 module.exports = router;

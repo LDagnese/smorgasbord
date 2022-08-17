@@ -11,10 +11,11 @@ router.get("/", (req, res) => {
             const cart = dbCartData.map((cartItems) =>
                 cartItems.get({ plain: true })
             );
+            console.log(cart);
             // const posts = dbPostData.map((post) => post.get({ plain: true }));
             res.render("cart", {
                 cart,
-                // loggedIn: req.session.loggedIn,
+                loggedIn: req.session.loggedIn,
             });
         })
         .catch((err) => {
@@ -103,4 +104,4 @@ module.exports = router;
 // somehow create a cart when a user is created - can't do it within the same router.post for a user, but it's not working with a router.post for a cart
 // not sure why
 
-// need to 
+// need to
