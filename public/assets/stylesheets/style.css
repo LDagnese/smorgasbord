@@ -70,6 +70,7 @@ a {
 .center-container {
   text-align: center;
 }
+
 .restaurant-card h2 {
   color: black;
 }
@@ -102,6 +103,7 @@ a {
   font-weight: bold;
   width: 45%;
 }
+
 @media (max-width: 1280px) {
   .container {
     width: 100%;

@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
             const cart = dbCartData.map((cartItems) =>
                 cartItems.get({ plain: true })
             );
-            console.log(cart);
+            // console.log(cart);
             // const posts = dbPostData.map((post) => post.get({ plain: true }));
             res.render("cart", {
                 cart,
@@ -61,7 +61,8 @@ router.delete("empty/:id", (req, res) => {
 });
 
 // deletes a single cart item with a certain cartItem id
-router.delete("delete/:id", (req, res) => {
+router.delete("/delete/:id", (req, res) => {
+    console.log(req.params.id);
     CartItem.destroy({
         where: {
             id: req.params.id,
@@ -72,9 +73,8 @@ router.delete("delete/:id", (req, res) => {
                 res.status(404).json({
                     message: "No cart item found with this id",
                 });
-                return;
             }
-            res.json(dbCartItemData);
+            // res.json(dbCartItemData);
         })
         .catch((err) => {
             console.log(err);
