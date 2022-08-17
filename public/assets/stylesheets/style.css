@@ -12,14 +12,14 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #416788;
+  background-color: #1e90ff;
   z-index: 1000;
 }
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #416788;
+  background-color: #1e90ff;
   z-index: 1000;
 }
 li {
@@ -54,6 +54,7 @@ a {
 }
 .nav-branding {
   font-size: 2rem;
+  font-family: "Righteous", cursive;
 }
 .nav-link {
   font-size: larger;
@@ -61,9 +62,9 @@ a {
 .restaurant-card {
   color: black;
   border: solid;
-  border-color: red;
-  border-width: 15px;
-  padding: 15px;
+  border-color: #00bfff;
+  border-width: 25px;
+  padding: 5px;
   margin: 15px;
 }
 .center-container {
@@ -76,6 +77,9 @@ a {
   background-color: #edf2f4;
   max-width: 800px;
   margin-bottom: 0;
+  border: solid;
+  border-color: #00bfff;
+  border-width: 15px;
 }
 .restaurant-title {
   font-size: 50px;
