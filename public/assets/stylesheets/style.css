@@ -70,7 +70,7 @@ a {
   text-align: center;
 }
 
-.restaurant-dish {
+/* .restaurant-dish {
   background-color: #edf2f4;
   max-width: 700px;
   margin-bottom: 0;
@@ -95,11 +95,12 @@ a {
   background-color: #d90429;
   font-weight: bold;
   width: 45%;
+} */
 
 .restaurant-card h2{
   color:black;
-
 }
+
 @media (max-width: 1280px) {
   .container {
     width: 100%;
