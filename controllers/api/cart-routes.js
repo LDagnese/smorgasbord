@@ -74,7 +74,7 @@ router.delete("/delete/:id", (req, res) => {
                     message: "No cart item found with this id",
                 });
             }
-            // res.json(dbCartItemData);
+            res.json(dbCartItemData);
         })
         .catch((err) => {
             console.log(err);

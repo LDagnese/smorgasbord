@@ -12,22 +12,24 @@ async function deleteFromCartHandler(event) {
         });
         if (response.ok) {
             console.log("success");
+            window.location.reload();
             // document.location.replace("/api/cart");
         } else {
             alert(response.statusText);
         }
+        // window.location.reload();
 
-        console.log("it got here");
-        const replaceCart = await fetch("/api/cart", {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-        });
-        if (replaceCart.ok) {
-            console.log("success");
-            document.location.replace("/api/cart");
-        } else {
-            alert(replaceCart.statusText);
-        }
+        // console.log("it got here");
+        // const replaceCart = await fetch("/api/cart", {
+        //     method: "GET",
+        //     headers: { "Content-Type": "application/json" },
+        // });
+        // if (replaceCart.ok) {
+        //     console.log("success");
+        //     document.location.replace("/api/cart");
+        // } else {
+        //     alert(replaceCart.statusText);
+        // }
     }
 }
 
