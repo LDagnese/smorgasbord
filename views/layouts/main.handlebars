@@ -44,7 +44,7 @@
           {{!-- <li class="nav-link"><a href="/">About</a></li> --}}
           {{#if loggedIn}}
             <button id="logout" class="">logout</button>
-            <button id="{{id}}" class="cart">cart</button>
+            <button class="cart" href="/api/cart">cart</button> 
           {{else}}
             <a href="/login">login</a>
           {{/if}}
@@ -62,8 +62,9 @@
       <div class="center-container">&copy; 2022 Smorgasbord, Inc.</div>
     </div>
   </footer>
-  {{#if loggedIn}}
+ {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
+  <script src="/javascript/goToCart.js"></script>
   {{/if}}
   </body>
 </html>
