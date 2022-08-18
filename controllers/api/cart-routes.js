@@ -38,11 +38,11 @@ router.post("/", (req, res) => {
 });
 
 // deletes all cart items with a certain cart id
-router.delete("empty/:id", (req, res) => {
-    CartItem.destroy_all({
+router.delete("/empty/", (req, res) => {
+    CartItem.destroy({
         //see if this throws error
         where: {
-            cart_id: req.params.id,
+            cart_id: req.session.user_id,
         },
     })
         .then((dbCartData) => {
@@ -62,7 +62,6 @@ router.delete("empty/:id", (req, res) => {
 
 // deletes a single cart item with a certain cartItem id
 router.delete("/delete/:id", (req, res) => {
-    console.log(req.params.id);
     CartItem.destroy({
         where: {
             id: req.params.id,
@@ -83,7 +82,7 @@ router.delete("/delete/:id", (req, res) => {
     return;
 });
 
-router.post("create/", (req, res) => {
+router.post("/create/", (req, res) => {
     Cart.create({
         user_id: req.session.user_id,
     })
@@ -97,8 +96,3 @@ router.post("create/", (req, res) => {
 });
 
 module.exports = router;
-
-// somehow create a cart when a user is created - can't do it within the same router.post for a user, but it's not working with a router.post for a cart
-// not sure why
-
-// need to
