@@ -38,7 +38,6 @@ router.get("/:id", (req, res) => {
             },
         ],
     }).then((dbRestaurantData) => {
-        console.log(dbRestaurantData.get({ plain: true }));
         const restaurant = dbRestaurantData.get({ plain: true });
         res.render("menu", {
             restaurant,

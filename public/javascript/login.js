@@ -39,20 +39,13 @@ async function signupFormHandler(event) {
             headers: { "Content-Type": "application/json" },
         });
         if (response.ok) {
-            // document.location.replace("/");
             console.log("success");
         } else {
             alert(response.statusText);
         }
 
-        console.log("hello");
         const check = fetch("/api/cart/create/", {
             method: "post",
-            // body: JSON.stringify({
-            //     username,
-            //     email,
-            //     password,
-            // }),
             headers: { "Content-Type": "application/json" },
         });
         if (check.ok) {
