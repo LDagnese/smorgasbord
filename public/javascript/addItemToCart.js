@@ -1,5 +1,4 @@
 async function addToCartFormHandler(event) {
-
     if (event.target.className.slice(0, 11) === "add-to-cart") {
         event.preventDefault();
 
@@ -7,6 +6,7 @@ async function addToCartFormHandler(event) {
         const dish_id = event.target.id; //get dish_id from the id of the item that was clicked on, event.target.id
         // take name, price - get cart_id from the class=cart, and take the cart_id from there
         const name = document.querySelector(`#name-${dish_id}`).innerText;
+        console.log(name);
         const price = document
             .querySelector(`#price-${dish_id}`)
             .className.slice(6);
