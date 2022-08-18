@@ -103,7 +103,34 @@ a {
   font-weight: bold;
   width: 45%;
 }
-
+.signup-to {
+  color: white;
+  text-align: center;
+  background-color: #d90429;
+  width: 40%;
+  height: 60px;
+}
+.login-to {
+  color: white;
+  text-align: center;
+  background-color: #d90429;
+  width: 40%;
+  height: 60px;
+}
+.btn-login {
+  color: white;
+  background-color: #d90429;
+  font-weight: bold;
+}
+.btn-signup {
+  color: white;
+  background-color: #d90429;
+  font-weight: bold;
+}
+.login-signup-agreement {
+  width: 23%;
+  text-align: center;
+}
 @media (max-width: 1280px) {
   .container {
     width: 100%;
