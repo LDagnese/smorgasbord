@@ -16,7 +16,7 @@ header {
   z-index: 1000;
 }
 footer {
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100%;
   background-color: #1e90ff;
